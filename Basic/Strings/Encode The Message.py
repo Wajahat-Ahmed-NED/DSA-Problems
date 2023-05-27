@@ -7,7 +7,6 @@ from math import *
 
 def encode(message):
     # Write your code here.
-   
     ans=0
     temp=message[0]
     result=message[0]
