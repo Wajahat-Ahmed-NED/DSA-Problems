@@ -17,7 +17,7 @@ void isSorted(int *arr,int n){
 
 int main() {
     // Write C++ code here
-    cout << "Hello world!"<<endl;;
+    cout << "Hello world!"<<endl;
     int arr[6]={3,5,3,6,8,0};
     int size=6;
     isSorted(arr,size);
