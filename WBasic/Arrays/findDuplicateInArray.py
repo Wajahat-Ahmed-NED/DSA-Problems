@@ -11,3 +11,24 @@ for i in arr:
         print("Duplicate Element",i)
     else:
         ans.append(i)
+
+
+# ===========OR=============
+
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        dict1={}
+        for i in nums:
+            try:
+                if dict1[i]>=1:
+                    return True
+                
+            except Exception as e:
+                dict1[i]=1
+                
+        return False
+        
