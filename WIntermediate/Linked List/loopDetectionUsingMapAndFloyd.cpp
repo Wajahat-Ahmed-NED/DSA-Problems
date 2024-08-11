@@ -34,6 +34,25 @@ bool detectLoop(Node* head){
     return 0;
 }
 
+//more better floyd detect approach
+  bool hasCycle(ListNode *head) {
+
+        ListNode* slow=head;
+        ListNode* fast=head;
+
+        while(fast!=NULL && fast->next!=NULL){
+            fast=fast->next->next;
+            slow=slow->next;
+            
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+      
+    }
+    
+// won't work for this usecase [1,2]
 Node* floydDetectLoop(Node* head){
     if (head==NULL){
         return NULL;
