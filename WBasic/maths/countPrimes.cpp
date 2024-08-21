@@ -20,3 +20,28 @@ public:
         return count;
     }
 };
+
+//========More Optimized=============
+
+class Solution {
+public:
+    int countPrimes(int n) {
+        
+        vector<bool> arr(n+1, true);
+        arr[0]=arr[1]=false;
+        int cnt=0;
+
+        for(int i=2;i*i<=n;i++){
+            if(arr[i]){
+                for(int j=i*i; j<=n; j= i==2 ? j+i : 2*i+j){
+                    arr[j]=false;
+                }
+            }
+        }
+
+        for(int k=0;k<arr.size()-1;k++){
+            if(arr[k]) cnt++;
+        }
+      return cnt;
+    }
+};
