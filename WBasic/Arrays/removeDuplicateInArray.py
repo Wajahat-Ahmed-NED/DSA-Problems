@@ -1,4 +1,5 @@
 j = 1
+# first pointer to hold the unique index value
 for i in range(1, len(nums)):
     if nums[i] != nums[i - 1]:
         nums[j] = nums[i]

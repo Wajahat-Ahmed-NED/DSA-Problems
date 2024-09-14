@@ -1,18 +1,23 @@
 // #Sieve of Erastothenesis -- Topic
 // Source : LeetCode
 
-class Solution {
+class Solution
+{
 public:
-    int countPrimes(int n) {
-        vector<bool> primes(n+1,true);
-        primes[0]=primes[1]=false;
-        int count=0;
+    int countPrimes(int n)
+    {
+        vector<bool> primes(n + 1, true);
+        primes[0] = primes[1] = false;
+        int count = 0;
 
-        for (int i=2; i<n;i++){
-            if (primes[i]){
+        for (int i = 2; i < n; i++)
+        {
+            if (primes[i])
+            {
                 count++;
-                for (int j=i*2;j<n;j=j+i){
-                    primes[j]=false;
+                for (int j = i * 2; j < n; j = j + i)
+                {
+                    primes[j] = false;
                 }
             }
         }
@@ -23,25 +28,32 @@ public:
 
 //========More Optimized=============
 
-class Solution {
+class Solution
+{
 public:
-    int countPrimes(int n) {
-        
-        vector<bool> arr(n+1, true);
-        arr[0]=arr[1]=false;
-        int cnt=0;
+    int countPrimes(int n)
+    {
 
-        for(int i=2;i*i<=n;i++){
-            if(arr[i]){
-                for(int j=i*i; j<=n; j= i==2 ? j+i : 2*i+j){
-                    arr[j]=false;
+        vector<bool> arr(n + 1, true);
+        arr[0] = arr[1] = false;
+        int cnt = 0;
+
+        for (int i = 2; i * i <= n; i++)
+        {
+            if (arr[i])
+            {
+                for (int j = i * i; j <= n; j = i == 2 ? j + i : 2 * i + j)
+                {
+                    arr[j] = false;
                 }
             }
         }
 
-        for(int k=0;k<arr.size()-1;k++){
-            if(arr[k]) cnt++;
+        for (int k = 0; k < arr.size() - 1; k++)
+        {
+            if (arr[k])
+                cnt++;
         }
-      return cnt;
+        return cnt;
     }
 };

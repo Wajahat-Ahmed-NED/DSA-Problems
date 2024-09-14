@@ -2,14 +2,16 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     // Write C++ code here
     int n;
-    cin>>n;
-    
-    while(n!=0){
-        cout<<n%10;
-        n=n/10;
+    cin >> n;
+
+    while (n != 0)
+    {
+        cout << n % 10;
+        n = n / 10;
     }
     return 0;
 }
@@ -17,19 +19,20 @@ int main() {
 // or
 
 #include <iostream>
-#include <cmath> 
+#include <cmath>
 using namespace std;
 
-int main() {
+int main()
+{
     // Write C++ code here
-    cout << "Try programiz.pro"<<endl;
-    
+    cout << "Try programiz.pro" << endl;
+
     int n;
-    cin>>n;
-    
-    n=(int)(log10(n)+1);
-    
-    cout<<n;
+    cin >> n;
+
+    n = (int)(log10(n) + 1);
+
+    cout << n;
 
     return 0;
 }
