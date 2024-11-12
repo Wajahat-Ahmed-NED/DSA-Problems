@@ -1,23 +1,25 @@
 #include <iostream>
 using namespace std;
 
-
-int findHeight(struct Node* root){
-    if(root==NULL){
+int findHeight(struct Node *root)
+{
+    if (root == NULL)
+    {
         return 0;
     }
 
-    int left=findHeight(root->left);
-    int right=findHeight(root->right);
+    int left = findHeight(root->left);
+    int right = findHeight(root->right);
 
-    int ans=max(left,right)+1;
+    int ans = max(left, right) + 1;
 
     return ans;
 }
 
-int main(){
+int main()
+{
 
-    int ans=findHeight(node);
+    int ans = findHeight(node);
 
     return 0;
 }

@@ -18,33 +18,31 @@
     };
 
 *****************************************************************/
-void reverse(LinkedListNode<int>* &head,LinkedListNode<int>* curr,LinkedListNode<int>* prev){
-    
-    if(curr==NULL){
-        head=prev;
+void reverse(LinkedListNode<int> *&head, LinkedListNode<int> *curr, LinkedListNode<int> *prev)
+{
+
+    if (curr == NULL)
+    {
+        head = prev;
         return;
     }
 
+    LinkedListNode<int> *forward = curr->next;
 
-    LinkedListNode<int>* forward=curr->next;
-
-    reverse(head,forward,curr);
-
-    curr->next=prev;
+    curr->next = prev;
+    reverse(head, forward, curr);
+    // curr->next=prev; will give same result
 }
 
-
-LinkedListNode<int> *reverseLinkedList(LinkedListNode<int> *head) 
+LinkedListNode<int> *reverseLinkedList(LinkedListNode<int> *head)
 {
     // Write your code here
-    LinkedListNode<int>* prev=NULL;
-    LinkedListNode<int>* curr=head;
+    LinkedListNode<int> *prev = NULL;
+    LinkedListNode<int> *curr = head;
 
-    reverse(head,curr,prev);
+    reverse(head, curr, prev);
 
     return head;
-
-
 
     // if(head==NULL || head->next==NULL){
     //     return head;
