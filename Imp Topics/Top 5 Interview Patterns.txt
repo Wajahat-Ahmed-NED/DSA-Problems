@@ -1,0 +1,5 @@
+0:41 Tree.  - 5
+2:41 Stack. - 4 
+4:30 Sliding window.  - 3
+7:10 Dynamic Programming.  - 2
+9:34 Graph.  - 1

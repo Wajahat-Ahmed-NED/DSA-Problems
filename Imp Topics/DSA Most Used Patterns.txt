@@ -1,3 +1,8 @@
+Top 20 coding patterns for interviews - follow this resource https://www.designgurus.io/blog/grokking-the-coding-interview-patterns
+For top 20 company wise Microsoft/Amazon/Google etc. questions follow Design Guru website
+
+
+
 - *Introduction:*
   - 8 important patterns for coding interviews split into two categories:
     - *Linear structures:* arrays, linked lists, strings.
