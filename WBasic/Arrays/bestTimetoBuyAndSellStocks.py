@@ -8,6 +8,5 @@ def maxProfit(self, prices) :
     currentProfit = prices[right] - prices[left]
       profit = max(currentProfit, profit) 
     else : left = right
-                                                                                                                                                                      right += 1
-
-                                                                                                                                                                  return profit
+    right += 1
+    return profit
