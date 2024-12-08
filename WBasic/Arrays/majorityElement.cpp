@@ -1,4 +1,6 @@
-// The code implements the Boyer-Moore Voting Algorithm, which assumes that a majority element exists in the array, where the majority element is defined as an element appearing more than n/2 times.
+// The code implements the Boyer-Moore Voting Algorithm, which assumes
+// that a majority element exists in the array, where the majority element is
+// defined as an element appearing more than n/2 times.
 
 // can also be done using unordered_map
 
