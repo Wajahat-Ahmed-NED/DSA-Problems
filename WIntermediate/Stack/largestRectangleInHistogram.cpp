@@ -1,5 +1,9 @@
 // Brute Force Approach
 //  Source : Leet Code
+#include <iostream>
+#include <vector>
+#include <stack>
+using namespace std;
 
 class Solution
 {
