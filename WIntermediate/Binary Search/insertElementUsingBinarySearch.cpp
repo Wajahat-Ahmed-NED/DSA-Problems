@@ -1,5 +1,9 @@
 // Leetcode Link: https://leetcode.com/problems/search-insert-position/
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class Solution
 {
 public:

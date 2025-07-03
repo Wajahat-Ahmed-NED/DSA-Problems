@@ -1,19 +1,37 @@
 // Source : Coding Ninjas
-#include <bits/stdc++.h> 
-void bubbleSort(vector<int>& arr, int n)
-{   
+#include <bits/stdc++.h>
+void bubbleSort(vector<int> &arr, int n)
+{
     // Write your code here.
-    for (int i=0;i<n-1;i++){
-        bool swapped=false;
-        for (int j=0;j<n-i-1;j++){
-            if (arr[j]>arr[j+1]){
-                swap(arr[j],arr[j+1]);
-                swapped=true;
+    for (int i = 0; i < n - 1; i++)
+    {
+        bool swapped = false;
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
             }
         }
-        if (swapped==false){
+        if (swapped == false)
+        {
             break;
         }
     }
+}
 
+for (int i = 0; i < n - 1; i++)
+{
+    bool swapped = false;
+    for (int j = 0; j < n - i - 1; j++)
+    {
+        if (arr[j + 1] < arr[j])
+        {
+            swap(arr[j], arr[j + 1]);
+            swapped = true;
+        }
+    }
+    if (!swapped)
+        break;
 }
