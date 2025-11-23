@@ -1,0 +1,100 @@
+[
+    {
+        "name": "TechCorp",
+        "teams": [
+            {
+                "name": "Platform",
+                "members": [
+                    {
+                        "name": "Ali",
+                        "tasks": [
+                            {
+                                "id": 101,
+                                "title": "Design API",
+                                "priority": 2,
+                                "dueDate": "2025-11-20"
+                            },
+                            null,
+                            {
+                                "id": 102,
+                                "title": "Fix Bug",
+                                "priority": 1,
+                                "dueDate": "2025-11-15"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Hina",
+                        "tasks": [
+                            {
+                                "id": 103,
+                                "title": "Write Tests",
+                                "priority": 3,
+                                "dueDate": "2025-11-12"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "AI",
+                "members": [
+                    {
+                        "name": "Sara",
+                        "tasks": [
+                            [
+                                {
+                                    "id": 102,
+                                    "title": "Fix Bug",
+                                    "priority": 1,
+                                    "dueDate": "2025-11-15",
+                                    "note": "duplicate"
+                                },
+                                null
+                            ],
+                            {
+                                "id": 104,
+                                "title": null,
+                                "priority": 1,
+                                "dueDate": "2025-11-30"
+                            },
+                            {
+                                "id": 105,
+                                "title": "Train Model",
+                                "priority": 4,
+                                "dueDate": "2025-11-08"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "DataWorks",
+        "teams": [
+            {
+                "name": "Analytics",
+                "members": [
+                    {
+                        "name": "Omer",
+                        "tasks": [
+                            {
+                                "id": 106,
+                                "title": "Dashboard Update",
+                                "priority": 2,
+                                "dueDate": "2025-11-09"
+                            },
+                            {
+                                "id": 107,
+                                "title": null,
+                                "priority": null,
+                                "dueDate": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
