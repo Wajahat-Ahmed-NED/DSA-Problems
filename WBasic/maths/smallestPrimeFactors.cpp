@@ -23,7 +23,7 @@ int main()
 
             for (int j = i * i; j <= 100000; j += i)
             {
-                if (spf[j] == j)
+                if (spf[j] == j) // Very Important Line
                 {
                     spf[j] = i;
                 }
