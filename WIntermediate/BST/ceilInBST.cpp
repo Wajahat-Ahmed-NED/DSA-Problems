@@ -55,3 +55,26 @@ int findCeil(Node *root, int input)
 
     return ceils;
 }
+
+//Practice: https://practice.geeksforgeeks.org/problems/ceiling-in-bst/1
+
+int find(Node *root,int input, int ceil){
+    if(root==NULL) {
+        if(ceil==INT_MAX) return -1;
+        return ceil;
+    }
+
+    if(root->val==input) return input;
+    if(root->val>input){
+        ceil=min(ceil,root->val);
+        return find(root->left,input,ceil);
+    }
+    return find(root->right,input,ceil);
+}
+
+int findCeil(Node *root, int input)
+{
+    if(root==NULL) return -1;
+
+    return find(root,input,INT_MAX);
+}
