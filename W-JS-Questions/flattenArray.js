@@ -15,6 +15,19 @@ function flattenArray(arr) {
     return result;
 }
 
+function flattenArray(arr) {
+    const result = []
+    for (const i of arr) {
+        if (Array.isArray(i)) {
+            result.push(...flattenArray(i))
+        }
+        else {
+            result.push(i);
+        }
+    }
+    return result;
+}
+
 function flattenArrayUsingReduce(arr) {
 
     const result = arr.reduce((prev, curr) => {

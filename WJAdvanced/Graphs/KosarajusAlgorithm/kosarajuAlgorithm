@@ -1,0 +1,63 @@
+//Position this line where user code will be pasted.
+class Solution {
+  public:
+    void topologicalDFS(vector<vector<int>> &adj,vector<int> &visited, stack<int> &s,int u){
+        visited[u]=1;
+        
+        for(auto &v:adj[u]){
+            if(!visited[v]){
+                topologicalDFS(adj,visited,s,v);
+            }
+        }
+        
+        s.push(u);
+    }
+    
+    void dfsOnStack(vector<vector<int>> &adj,vector<int> &visited,int u){
+        visited[u]=1;
+        
+        for(auto &v:adj[u]){
+            if(!visited[v]){
+                dfsOnStack(adj,visited,v);
+            }
+        }
+    }
+    
+    
+    int kosaraju(vector<vector<int>> &adj) {
+        // code here
+        // 1) Find topological sort so nodes are in correct order
+        int V=adj.size();
+        vector<int> visited(V,0);
+        stack<int> s;
+        
+        for(int i=0;i<V;i++){
+            if(!visited[i]){
+                topologicalDFS(adj,visited,s,i);
+            }
+        }
+        
+        
+        // 2)Reverse all the graph
+        vector<vector<int>> reversedAdj(V);
+        for(int i=0;i<V;i++){
+            for(int j=0;j<adj[i].size();j++){
+                reversedAdj[adj[i][j]].push_back(i);
+            }
+        }
+        
+        // 3) Perform DFS on stack;
+        visited=vector<int>(V,0);
+        int count=0;
+        while(!s.empty()){
+            int top=s.top();
+            s.pop();
+            if(!visited[top]){
+                count++;
+                dfsOnStack(reversedAdj,visited,top);
+            }
+        }
+        
+        return count;
+    }
+};
